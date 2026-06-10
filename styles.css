@@ -187,10 +187,11 @@ a {
   box-shadow: inset 0 0 0 1px rgba(168, 85, 247, 0.12), 0 0 32px rgba(56, 189, 248, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
 /* Interests Section */
 .interests {
   max-width: 1080px;
-  margin: 0 auto 2rem;
+  margin: 3rem auto 2rem; /* adds spacing above Interests */
   padding: 2rem 1.5rem;
   background: rgba(8, 15, 30, 0.72);
   backdrop-filter: blur(14px);
@@ -204,7 +205,8 @@ a {
   margin-top: 0;
   font-size: 1.75rem;
   color: #cbd5e1;
-  text-align: center;
+  text-align: center; /* centers heading */
+  margin-bottom: 1.5rem; /* spacing below heading */
 }
 
 .interest-grid {
@@ -219,7 +221,8 @@ a {
   border-radius: 1.2rem;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(56, 189, 248, 0.2);
-  box-shadow: inset 0 0 0 1px rgba(168, 85, 247, 0.12), 0 0 32px rgba(56, 189, 248, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(168, 85, 247, 0.12), 
+              0 0 32px rgba(56, 189, 248, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   text-align: center;
   color: #f8fafc;
@@ -227,8 +230,10 @@ a {
 
 .interest-item:hover {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: inset 0 0 0 1px rgba(168, 85, 247, 0.22), 0 0 48px rgba(56, 189, 248, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(168, 85, 247, 0.22), 
+              0 0 48px rgba(56, 189, 248, 0.18);
 }
+
 
 .skill-item:hover,
 .project-card:hover {
