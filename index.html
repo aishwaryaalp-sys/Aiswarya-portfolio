@@ -3,131 +3,598 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | AISWARYA R NAIR</title>
+  <title>Aiswarya R Nair | Portfolio</title>
+  <!-- Google Fonts - Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  <header class="site-header">
+
+  <!-- Shared SVG gradient definition for heading accents -->
+  <svg width="0" height="0" style="position:absolute;" aria-hidden="true">
+    <defs>
+      <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#38bdf8"/>
+        <stop offset="100%" stop-color="#a78bfa"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ── Mesh Background ── -->
+  <div class="mesh-container">
+    <div class="mesh-base"></div>
+    <div class="mesh-blob blob1"></div>
+    <div class="mesh-blob blob2"></div>
+    <div class="mesh-blob blob3"></div>
+    <div class="mesh-blob blob4"></div>
+    <div class="mesh-blob blob5"></div>
+    <div class="grain-overlay"></div>
+  </div>
+
+  <!-- ── Floating Geometry ── -->
+  <div class="geometry-container">
+    <!-- Large ring top-right -->
+    <div class="float-shape ring-lg" style="top: 8%; right: 6%;">
+      <div class="ring-inner"></div>
+    </div>
+    <!-- Small ring mid-left -->
+    <div class="float-shape ring-sm" style="top: 42%; left: 3%; animation-delay: -4s;">
+      <div class="ring-inner"></div>
+    </div>
+    <!-- Dot cluster -->
+    <div class="float-shape" style="top: 30%; right: 12%; animation-delay: -2s;">
+      <div class="float-dot-cluster">
+        <div class="geo-dot" style="animation-delay: 0s;"></div>
+        <div class="geo-dot" style="animation-delay: -0.8s;"></div>
+        <div class="geo-dot" style="animation-delay: -1.6s;"></div>
+      </div>
+    </div>
+    <!-- Bottom ring -->
+    <div class="float-shape ring-md" style="bottom: 14%; right: 8%; animation-delay: -6s;">
+      <div class="ring-inner"></div>
+    </div>
+    <!-- Grid plane -->
+    <div class="grid-plane" style="bottom: 20%; left: 5%;"></div>
+  </div>
+
+  <!-- ── Header & Navigation ── -->
+  <header class="site-header" id="site-header">
     <nav class="nav-bar">
-      <a class="logo" href="#hero">Aiswarya R Nair</a>
+      <a href="#hero" class="logo">Aiswarya R Nair</a>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <a href="#contact" class="hire-btn">Hire Me</a>
       </div>
     </nav>
   </header>
 
   <main>
+    <!-- ── Hero Section ── -->
     <section id="hero" class="hero-section">
-      <div class="hero-content">
-        <p class="eyebrow">Hello, I'm</p>
-        <h1>AISWARYA R NAIR</h1>
-        <p class="hero-text">A computer science engineering student passionate about web development and data analytics.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">View Projects</a>
-          <a class="button secondary" href="#contact">Get in Touch</a>
+      <div class="container hero-grid">
+        <!-- Text Content -->
+        <div class="hero-text-content">
+          <div class="reveal delay-0">
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              2nd Year B.Tech CSE
+            </div>
+          </div>
+          <div class="reveal delay-80">
+            <h1 class="hero-title">AISWARYA R NAIR</h1>
+          </div>
+          <div class="reveal delay-160">
+            <p class="hero-tagline">
+              Computer science student building the future — passionate about <span>web development</span> and <span>data analytics</span>.
+            </p>
+          </div>
+          <div class="reveal delay-240">
+            <div class="hero-actions">
+              <a href="#projects" class="btn-primary">
+                View Projects
+                <i data-lucide="arrow-right" style="width: 15px; height: 15px;"></i>
+              </a>
+              <a href="mailto:aishwaryaalp@gmail.com" class="btn-secondary">
+                <i data-lucide="mail" style="width: 15px; height: 15px;"></i>
+                Get in Touch
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo Card (3D Tilt Card) -->
+        <div class="reveal delay-100 hero-photo-wrapper">
+          <div class="tilt-card-wrapper" data-tilt-intensity="14">
+            <div class="photo-card">
+              <div class="photo-glow"></div>
+              <div class="photo-card-inner">
+                <!-- Check if local image works, otherwise fallback to styled placeholder -->
+                <img src="./aishu.jpeg" alt="Aiswarya R Nair" id="profile-img">
+                <div class="photo-label">
+                  <p>B.Tech CSE — TIST</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="hero-image">
-        <img src="aishu.jpeg" alt="Aiswarya R Nair">
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-dot-trail"></div>
+        <span class="scroll-text">Scroll</span>
       </div>
     </section>
 
-    <section id="about" class="section-card">
-      <h2>About Me</h2>
-      <p>Hi, I'm Aiswarya R Nair, a second year B.Tech CSE student at Toc H Institute of Science and Technology. I am interested in software development, data analytics, and technology. My goal is to become a skilled software engineer and work in top tech companies.</p>
-    </section>
-
-    <section id="skills" class="section-card">
-      <h2>Skills</h2>
-      <div class="skill-grid">
-  <div class="skill-item">
-    <h3>HTML &amp; CSS</h3>
-    <p>Currently learning to build clean, responsive, and visually appealing web pages using modern HTML5 and CSS3.</p>
-  </div>
-
-  <div class="skill-item">
-    <h3>C Programming</h3>
-    <p>Developing a strong foundation in programming fundamentals, problem-solving, and data structures using C.</p>
-  </div>
-
-  <div class="skill-item">
-    <h3>Python</h3>
-    <p>Getting comfortable with Python for scripting, automation, and exploring AI/ML basics.</p>
-  </div>
-
-  <div class="skill-item">
-    <h3>Full Stack Development (Learning)</h3>
-    <p>In the process of learning full stack development, combining frontend and backend skills to create complete web applications.</p>
-  </div>
-</div>
-
-    </section>
-
-    <section id="projects" class="section-card">
-      <h2>Projects</h2>
-      <div class="project-list">
-        <article class="project-card">
-          <h3>Personal Portfolio Website</h3>
-          <p>Designed and developed a responsive personal portfolio website using
-        HTML and CSS to showcase my skills, learning journey, and contact
-        information.</p>
-        </article>
-        <article class="project-card">
-          <h3>Full Stack Development Journey</h3>
-          <p>Currently learning Full Stack Web Development. Building projects using
-        HTML, CSS, JavaScript, and modern web technologies to strengthen my
-        development skills.</p>
-        </article>
-        <article class="project-card">
-          <h3>Calculator in Python</h3>
-          <p>
-        Built a calculator using Python that performs basic mathematical
-        operations. This project helped me understand functions, user input,
-        conditional statements, and problem-solving techniques.
-      </p>
-    </article>
+    <!-- ── About Section ── -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="reveal section-head">
+          <p class="section-eyebrow">About</p>
+          <h2 class="section-heading">Who I am</h2>
+          <svg class="heading-accent heading-accent-float" viewBox="0 0 64 8" aria-hidden="true">
+            <path d="M2 5 Q 16 2, 32 5 T 62 5"/>
+          </svg>
+        </div>
+        
+        <div class="about-grid">
+          <div class="reveal delay-0">
+            <div class="tilt-card-wrapper" data-tilt-intensity="6">
+              <div class="glass-card about-main-card">
+                <p class="about-text-highlight">
+                  Hi, I'm <span class="name">Aiswarya R Nair</span>, a second year Computer Science Engineering student at <span class="inst">Toc H Institute of Science and Technology</span>. I'm drawn to the intersection of software development and data — building things that are both functional and beautiful.
+                </p>
+                <p class="about-text-secondary">
+                  Right now I'm sharpening my problem-solving through DSA, exploring AI/ML, and taking on freelance projects to learn how real products get built and shipped. Beyond code, I'm curious and creative by nature — always exploring something new, with dance as the place I go to recharge.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="reveal delay-120">
+            <div class="tilt-card-wrapper" data-tilt-intensity="8">
+              <div class="glass-card about-info-card">
+                <div class="about-info-list">
+                  <div>
+                    <p class="info-item-label">Institution</p>
+                    <p class="info-item-value">TIST, Kerala</p>
+                  </div>
+                  <div>
+                    <p class="info-item-label">Degree</p>
+                    <p class="info-item-value">B.Tech CSE</p>
+                  </div>
+                  <div>
+                    <p class="info-item-label">Year</p>
+                    <p class="info-item-value">2nd Year</p>
+                  </div>
+                  <div>
+                    <p class="info-item-label">Status</p>
+                    <p class="info-item-value">Open to Internships</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <div class="section-card interests">
-  <h2>Interests</h2>
-  <div class="skill-grid">
-    <div class="skill-item">💃 Dance</div>
-    <div class="skill-item">🎶 Music</div>
-    <div class="skill-item">📚 Reading</div>
-    <div class="skill-item">🌍 Exploring New Tech Trends</div>
-  </div>
-</div>
 
+    <!-- ── Skills Section ── -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="reveal section-head">
+          <p class="section-eyebrow">Expertise</p>
+          <h2 class="section-heading">Skills</h2>
+          <svg class="heading-accent heading-accent-float" viewBox="0 0 64 8" aria-hidden="true">
+            <path d="M2 5 Q 16 2, 32 5 T 62 5"/>
+          </svg>
+          <p class="section-subtitle">Technologies and tools I've been building with, and where I'm sharpening focus next.</p>
+        </div>
 
-    <section id="contact" class="section-card contact-card">
-      <h2>Contact</h2>
-      <p>Feel free to connect with me regarding projects, internships, and
-    collaboration opportunities..</p>
-      <div class="contact-details">
-  <div><strong>Email:</strong> aishwaryaalp@gmail.com</div>
-  <div><strong>Location:</strong> Palakkad, Kerala, India</div>
-  <div><strong>LinkedIn:</strong> 
-    <a href="https://www.linkedin.com/in/aiswarya-r-nair-90842b37b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-      View Profile
-    </a>
-  </div>
-</div>
+        <div class="skills-grid">
+          <!-- HTML & CSS -->
+          <div class="reveal delay-0">
+            <div class="tilt-card-wrapper" data-tilt-intensity="10">
+              <div class="glass-card skill-card neon-hover" style="border-color: rgba(56, 189, 248, 0.145); --skill-glow: rgba(56, 189, 248, 0.45);">
+                <div class="skill-icon-box" style="background: rgba(56, 189, 248, 0.09); border: 1px solid rgba(56, 189, 248, 0.2);">
+                  <i data-lucide="globe" style="width: 20px; height: 20px; color: #38bdf8;"></i>
+                </div>
+                <div>
+                  <h3 class="skill-title">HTML & CSS</h3>
+                  <p class="skill-desc">Clean, responsive web pages with HTML5 and CSS3.</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-<div class="contact-links">
-  <a class="button secondary" href="mailto:aishwaryaalp@gmail.com">Email Me</a>
-  <a class="button secondary" href="https://www.linkedin.com/in/aiswarya-r-nair-90842b37b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-    LinkedIn
-  </a>
-</div>
+          <!-- C Programming -->
+          <div class="reveal delay-80">
+            <div class="tilt-card-wrapper" data-tilt-intensity="10">
+              <div class="glass-card skill-card neon-hover" style="border-color: rgba(167, 139, 250, 0.145); --skill-glow: rgba(167, 139, 250, 0.45);">
+                <div class="skill-icon-box" style="background: rgba(167, 139, 250, 0.09); border: 1px solid rgba(167, 139, 250, 0.2);">
+                  <i data-lucide="terminal" style="width: 20px; height: 20px; color: #a78bfa;"></i>
+                </div>
+                <div>
+                  <h3 class="skill-title">C Programming</h3>
+                  <p class="skill-desc">Fundamentals, problem-solving, data structures.</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <!-- Python -->
+          <div class="reveal delay-160">
+            <div class="tilt-card-wrapper" data-tilt-intensity="10">
+              <div class="glass-card skill-card neon-hover" style="border-color: rgba(52, 211, 153, 0.145); --skill-glow: rgba(52, 211, 153, 0.45);">
+                <div class="skill-icon-box" style="background: rgba(52, 211, 153, 0.09); border: 1px solid rgba(52, 211, 153, 0.2);">
+                  <i data-lucide="code" style="width: 20px; height: 20px; color: #34d399;"></i>
+                </div>
+                <div>
+                  <h3 class="skill-title">Python</h3>
+                  <p class="skill-desc">Scripting, automation, and AI/ML basics.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full Stack (Learning) -->
+          <div class="reveal delay-240">
+            <div class="tilt-card-wrapper" data-tilt-intensity="10">
+              <div class="glass-card skill-card neon-hover" style="border-color: rgba(244, 114, 182, 0.145); --skill-glow: rgba(244, 114, 182, 0.45);">
+                <div class="skill-icon-box" style="background: rgba(244, 114, 182, 0.09); border: 1px solid rgba(244, 114, 182, 0.2);">
+                  <i data-lucide="database" style="width: 20px; height: 20px; color: #f472b6;"></i>
+                </div>
+                <div>
+                  <h3 class="skill-title">Full Stack (Learning)</h3>
+                  <p class="skill-desc">Building end-to-end web applications.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Projects Section ── -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="reveal section-head">
+          <p class="section-eyebrow">Work</p>
+          <h2 class="section-heading">Projects</h2>
+          <svg class="heading-accent heading-accent-float" viewBox="0 0 64 8" aria-hidden="true">
+            <path d="M2 5 Q 16 2, 32 5 T 62 5"/>
+          </svg>
+          <p class="section-subtitle">Hover a card to flip it and read more — or tap, on mobile.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 01 -->
+          <div class="reveal delay-0">
+            <div class="tilt-card-wrapper" data-tilt-intensity="8">
+              <div class="glass-card project-card">
+                <div class="project-flip-inner">
+                  <div class="project-face project-face-front">
+                    <div class="project-header">
+                      <span class="project-number" style="color: rgba(56, 189, 248, 0.156);">01</span>
+                      <div class="project-arrow-box" style="background: rgba(56, 189, 248, 0.125); border: 1px solid rgba(56, 189, 248, 0.25);">
+                        <i data-lucide="arrow-right" style="width: 13px; height: 13px; color: #38bdf8;"></i>
+                      </div>
+                    </div>
+                    <div class="project-body">
+                      <h3 class="project-title">Personal Portfolio</h3>
+                      <p class="project-desc">Responsive personal portfolio website using HTML and CSS to showcase skills and projects.</p>
+                    </div>
+                    <div class="project-tags">
+                      <span class="tag-badge" style="background: rgba(56, 189, 248, 0.07); border: 1px solid rgba(56, 189, 248, 0.18); color: #38bdf8;">HTML</span>
+                      <span class="tag-badge" style="background: rgba(56, 189, 248, 0.07); border: 1px solid rgba(56, 189, 248, 0.18); color: #38bdf8;">CSS</span>
+                      <span class="tag-badge" style="background: rgba(56, 189, 248, 0.07); border: 1px solid rgba(56, 189, 248, 0.18); color: #38bdf8;">Responsive Design</span>
+                    </div>
+                  </div>
+                  <div class="project-face project-face-back">
+                    <p class="project-back-label">The details</p>
+                    <p class="project-desc">Built section by section — mesh gradients, glass cards, and scroll reveals — to learn how layout, motion, and typography come together in a real, deployed site.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 02 -->
+          <div class="reveal delay-100">
+            <div class="tilt-card-wrapper" data-tilt-intensity="8">
+              <div class="glass-card project-card">
+                <div class="project-flip-inner">
+                  <div class="project-face project-face-front">
+                    <div class="project-header">
+                      <span class="project-number" style="color: rgba(167, 139, 250, 0.156);">02</span>
+                      <div class="project-arrow-box" style="background: rgba(167, 139, 250, 0.125); border: 1px solid rgba(167, 139, 250, 0.25);">
+                        <i data-lucide="arrow-right" style="width: 13px; height: 13px; color: #a78bfa;"></i>
+                      </div>
+                    </div>
+                    <div class="project-body">
+                      <h3 class="project-title">Full Stack Journey</h3>
+                      <p class="project-desc">Currently building full-stack projects using HTML, CSS, JavaScript and modern frameworks.</p>
+                    </div>
+                    <div class="project-tags">
+                      <span class="tag-badge" style="background: rgba(167, 139, 250, 0.07); border: 1px solid rgba(167, 139, 250, 0.18); color: #a78bfa;">HTML</span>
+                      <span class="tag-badge" style="background: rgba(167, 139, 250, 0.07); border: 1px solid rgba(167, 139, 250, 0.18); color: #a78bfa;">CSS</span>
+                      <span class="tag-badge" style="background: rgba(167, 139, 250, 0.07); border: 1px solid rgba(167, 139, 250, 0.18); color: #a78bfa;">JavaScript</span>
+                    </div>
+                  </div>
+                  <div class="project-face project-face-back">
+                    <p class="project-back-label">The details</p>
+                    <p class="project-desc">An ongoing series of small full-stack builds — practicing component structure, API calls, and state management as I move from static pages to dynamic apps.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 03 -->
+          <div class="reveal delay-200">
+            <div class="tilt-card-wrapper" data-tilt-intensity="8">
+              <div class="glass-card project-card">
+                <div class="project-flip-inner">
+                  <div class="project-face project-face-front">
+                    <div class="project-header">
+                      <span class="project-number" style="color: rgba(52, 211, 153, 0.156);">03</span>
+                      <div class="project-arrow-box" style="background: rgba(52, 211, 153, 0.125); border: 1px solid rgba(52, 211, 153, 0.25);">
+                        <i data-lucide="arrow-right" style="width: 13px; height: 13px; color: #34d399;"></i>
+                      </div>
+                    </div>
+                    <div class="project-body">
+                      <h3 class="project-title">Python Calculator</h3>
+                      <p class="project-desc">CLI calculator in Python covering functions, user input, conditionals and problem-solving.</p>
+                    </div>
+                    <div class="project-tags">
+                      <span class="tag-badge" style="background: rgba(52, 211, 153, 0.07); border: 1px solid rgba(52, 211, 153, 0.18); color: #34d399;">Python</span>
+                      <span class="tag-badge" style="background: rgba(52, 211, 153, 0.07); border: 1px solid rgba(52, 211, 153, 0.18); color: #34d399;">CLI</span>
+                    </div>
+                  </div>
+                  <div class="project-face project-face-back">
+                    <p class="project-back-label">The details</p>
+                    <p class="project-desc">A command-line calculator handling arithmetic, error cases, and repeat operations — solid practice in functions, conditionals, and clean user input handling.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Interests Section ── -->
+    <section class="section">
+      <div class="container">
+        <div class="reveal section-head">
+          <p class="section-eyebrow">Beyond Code</p>
+          <h2 class="section-heading">Interests</h2>
+          <svg class="heading-accent" viewBox="0 0 64 8" aria-hidden="true">
+            <path d="M2 5 Q 16 2, 32 5 T 62 5"/>
+          </svg>
+        </div>
+
+        <div class="interests-grid">
+          <!-- Dance -->
+          <div class="reveal delay-0">
+            <div class="tilt-card-wrapper" data-tilt-intensity="10">
+              <div class="glass-card interest-card neon-hover" style="border-color: rgba(244, 114, 182, 0.125); --interest-glow: rgba(244, 114, 182, 0.5);">
+                <div class="interest-icon-box" style="background: rgba(244, 114, 182, 0.094); border: 1px solid rgba(244, 114, 182, 0.22);">
+                  <i data-lucide="heart" style="width: 24px; height: 24px; color: #f472b6;"></i>
+                </div>
+                <span class="interest-label">Dance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Music -->
+          <div class="reveal delay-70">
+            <div class="tilt-card-wrapper" data-tilt-intensity="10">
+              <div class="glass-card interest-card neon-hover" style="border-color: rgba(167, 139, 250, 0.125); --interest-glow: rgba(167, 139, 250, 0.5);">
+                <div class="interest-icon-box" style="background: rgba(167, 139, 250, 0.094); border: 1px solid rgba(167, 139, 250, 0.22);">
+                  <i data-lucide="music" style="width: 24px; height: 24px; color: #a78bfa;"></i>
+                </div>
+                <span class="interest-label">Music</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reading -->
+          <div class="reveal delay-140">
+            <div class="tilt-card-wrapper" data-tilt-intensity="10">
+              <div class="glass-card interest-card neon-hover" style="border-color: rgba(56, 189, 248, 0.125); --interest-glow: rgba(56, 189, 248, 0.5);">
+                <div class="interest-icon-box" style="background: rgba(56, 189, 248, 0.094); border: 1px solid rgba(56, 189, 248, 0.22);">
+                  <i data-lucide="book-open" style="width: 24px; height: 24px; color: #38bdf8;"></i>
+                </div>
+                <span class="interest-label">Reading</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- New Tech -->
+          <div class="reveal delay-210">
+            <div class="tilt-card-wrapper" data-tilt-intensity="10">
+              <div class="glass-card interest-card neon-hover" style="border-color: rgba(52, 211, 153, 0.125); --interest-glow: rgba(52, 211, 153, 0.5);">
+                <div class="interest-icon-box" style="background: rgba(52, 211, 153, 0.094); border: 1px solid rgba(52, 211, 153, 0.22);">
+                  <i data-lucide="trending-up" style="width: 24px; height: 24px; color: #34d399;"></i>
+                </div>
+                <span class="interest-label">New Tech</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact Section ── -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="reveal section-head contact-header">
+          <p class="section-eyebrow">Contact</p>
+          <h2 class="section-heading">Let's Connect</h2>
+          <svg class="heading-accent" viewBox="0 0 64 8" aria-hidden="true">
+            <path d="M2 5 Q 16 2, 32 5 T 62 5"/>
+          </svg>
+          <p class="contact-desc">Open to internships, projects, and collaboration opportunities.</p>
+        </div>
+
+        <div class="reveal delay-100 contact-box-wrapper">
+          <div class="tilt-card-wrapper" data-tilt-intensity="5">
+            <div class="contact-box">
+              <div class="contact-box-glow"></div>
+              
+              <div class="contact-info-strip">
+                <div class="contact-info-item">
+                  <i data-lucide="mail" style="width: 15px; height: 15px; color: #38bdf8;"></i>
+                  <span>aishwaryaalp@gmail.com</span>
+                </div>
+                <span class="contact-divider">·</span>
+                <div class="contact-info-item">
+                  <i data-lucide="map-pin" style="width: 15px; height: 15px; color: #a78bfa;"></i>
+                  <span>Palakkad, Kerala, India</span>
+                </div>
+              </div>
+
+              <div class="contact-buttons">
+                <a href="mailto:aishwaryaalp@gmail.com" class="contact-btn-email">
+                  <i data-lucide="mail" style="width: 16px; height: 16px;"></i> Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/aiswarya-r-nair-90842b37b" target="_blank" rel="noopener noreferrer" class="contact-btn-linkedin">
+                  <i data-lucide="linkedin" style="width: 16px; height: 16px;"></i> LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
+  <!-- ── Footer ── -->
   <footer class="site-footer">
-    <p>© 2026 Your Name. Built with HTML and CSS.</p>
+    © 2026 Aiswarya R Nair
   </footer>
+
+  <!-- ── Scripts ── -->
+  <script>
+    // Initialize Lucide Icons (guarded: if the CDN is unreachable, the rest
+    // of the page's interactivity should still work).
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+
+    // Sticky Navigation Header logic
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // Fallback if image fails to load
+    const profileImg = document.getElementById('profile-img');
+    if (profileImg) {
+      profileImg.addEventListener('error', () => {
+        const parent = profileImg.parentElement;
+        // Replace image with modern visual fallback
+        parent.innerHTML = `
+          <div class="photo-fallback">
+            <div class="photo-avatar">A</div>
+            <span class="fallback-name">Aiswarya R Nair</span>
+          </div>
+          <div class="photo-label">
+            <p>B.Tech CSE — TIST</p>
+          </div>
+        `;
+      });
+    }
+
+    // Scroll Reveal implementation using IntersectionObserver
+    const revealElements = document.querySelectorAll('.reveal');
+    const observerOptions = {
+      root: null,
+      threshold: 0.12,
+      rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+        }
+      });
+    }, observerOptions);
+
+    revealElements.forEach(el => observer.observe(el));
+
+    // 3D Tilt Card Effect
+    // Note: project cards use their own flip animation on .project-flip-inner,
+    // so we skip applying tilt transforms to them to avoid transform conflicts.
+    const tiltCards = document.querySelectorAll('.tilt-card-wrapper');
+
+    tiltCards.forEach(wrapper => {
+      if (wrapper.querySelector('.project-card')) return; // skip flip cards
+
+      const card = wrapper.querySelector('.photo-card, .glass-card');
+      if (!card) return;
+
+      const intensity = parseFloat(wrapper.getAttribute('data-tilt-intensity')) || 10;
+      let frameId = null;
+
+      wrapper.addEventListener('mousemove', (e) => {
+        if (frameId) cancelAnimationFrame(frameId);
+
+        frameId = requestAnimationFrame(() => {
+          const rect = wrapper.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width - 0.5; // range [-0.5, 0.5]
+          const y = (e.clientY - rect.top) / rect.height - 0.5;  // range [-0.5, 0.5]
+
+          card.style.transform = `perspective(900px) rotateY(${x * intensity}deg) rotateX(${-y * intensity}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+      });
+
+      wrapper.addEventListener('mouseleave', () => {
+        if (frameId) cancelAnimationFrame(frameId);
+        
+        card.style.transform = 'perspective(900px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)';
+      });
+    });
+
+    // Tap-to-highlight on touch devices for hover-driven cards
+    // (skill cards, interest cards, project flip cards). Tapping toggles the
+    // same visual state that :hover provides on desktop, and tapping elsewhere
+    // clears it.
+    const touchTargets = document.querySelectorAll('.skill-card, .interest-card, .project-card');
+
+    function clearTouchActive(except) {
+      touchTargets.forEach(el => {
+        if (el !== except) el.classList.remove('touch-active');
+      });
+    }
+
+    touchTargets.forEach(el => {
+      el.addEventListener('touchstart', (e) => {
+        const isActive = el.classList.contains('touch-active');
+        clearTouchActive(el);
+        el.classList.toggle('touch-active', !isActive);
+      }, { passive: true });
+    });
+
+    document.addEventListener('touchstart', (e) => {
+      if (!e.target.closest('.skill-card, .interest-card, .project-card')) {
+        clearTouchActive(null);
+      }
+    }, { passive: true });
+  </script>
 </body>
 </html>
